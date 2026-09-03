@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="../../../extension/popup/" />
+    <script src="../../store/assets/src/mock-chrome.js"></script>
+    <meta charset="utf-8" />
+    <title>Read It To Me</title>
+    <link rel="stylesheet" href="popup.css" />
+    <style>
+      /* Screenshots render in a fixed light palette regardless of the host OS theme. */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #ffffff; --fg: #16181d; --muted: #6b7280; --line: #e5e7eb;
+          --accent: #2f6df6; --accent-fg: #ffffff; --ghost: #f3f4f6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <img src="../icons/icon48.png" alt="" width="24" height="24" />
+      <h1>Read It To Me</h1>
+    </header>
+
+    <div class="actions">
+      <button id="play" class="primary">Read this page</button>
+      <div class="row">
+        <button id="selection" class="ghost">Selection</button>
+        <button id="visible" class="ghost">From the top of the screen</button>
+      </div>
+      <button id="pick" class="ghost wide">Click a paragraph to start there</button>
+    </div>
+
+    <div id="transport" class="transport" hidden>
+      <button id="prev" title="Previous sentence" aria-label="Previous sentence">◀◀</button>
+      <button id="toggle" class="primary">Pause</button>
+      <button id="next" title="Next sentence" aria-label="Next sentence">▶▶</button>
+      <button id="stop" title="Stop" aria-label="Stop">■</button>
+    </div>
+
+    <p id="status" class="status"></p>
+    <p id="now" class="now"></p>
+
+    <section class="settings">
+      <label class="field">
+        <span>Voice</span>
+        <select id="voice"></select>
+      </label>
+      <button id="preview" class="ghost wide">Hear this voice</button>
+
+      <label class="field">
+        <span>Speed <b id="rateValue">1.0×</b></span>
+        <input id="rate" type="range" min="0.5" max="2" step="0.05" />
+      </label>
+      <label class="field">
+        <span>Pitch <b id="pitchValue">1.0</b></span>
+        <input id="pitch" type="range" min="0.5" max="1.5" step="0.05" />
+      </label>
+      <label class="field">
+        <span>Volume <b id="volumeValue">100%</b></span>
+        <input id="volume" type="range" min="0" max="1" step="0.05" />
+      </label>
+
+      <label class="check"><input id="highlight" type="checkbox" /> <span>Highlight the sentence being read</span></label>
+      <label class="check"><input id="autoScroll" type="checkbox" /> <span>Scroll along while reading</span></label>
+    </section>
+
+    <footer class="foot">
+      <a id="options" href="#">More voices &amp; shortcuts</a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

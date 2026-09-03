@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="../../../extension/options/" />
+    <script src="../../store/assets/src/mock-chrome.js"></script>
+    <meta charset="utf-8" />
+    <title>Read It To Me — Options</title>
+    <link rel="stylesheet" href="../popup/popup.css" />
+    <style>
+      body { width: auto; max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+      h2 { font-size: 15px; margin: 28px 0 8px; }
+      p, li { color: var(--muted); font-size: 13px; }
+      ol { padding-left: 18px; }
+      code { background: var(--ghost); padding: 1px 5px; border-radius: 5px; color: var(--fg); }
+      .card { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-top: 16px; }
+      .settings { border-top: 0; }
+    </style>
+    <style>
+      /* Screenshots render in a fixed light palette regardless of the host OS theme. */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #ffffff; --fg: #16181d; --muted: #6b7280; --line: #e5e7eb;
+          --accent: #2f6df6; --accent-fg: #ffffff; --ghost: #f3f4f6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <img src="../icons/icon128.png" alt="" width="32" height="32" />
+      <h1>Read It To Me</h1>
+    </header>
+
+    <div class="card">
+      <section class="settings">
+        <label class="field">
+          <span>Voice</span>
+          <select id="voice"></select>
+        </label>
+        <button id="preview" class="ghost wide">Hear this voice</button>
+        <label class="field">
+          <span>Speed <b id="rateValue">1.0×</b></span>
+          <input id="rate" type="range" min="0.5" max="2" step="0.05" />
+        </label>
+        <label class="field">
+          <span>Pitch <b id="pitchValue">1.0</b></span>
+          <input id="pitch" type="range" min="0.5" max="1.5" step="0.05" />
+        </label>
+        <label class="field">
+          <span>Volume <b id="volumeValue">100%</b></span>
+          <input id="volume" type="range" min="0" max="1" step="0.05" />
+        </label>
+        <label class="check"><input id="highlight" type="checkbox" /> <span>Highlight the sentence being read</span></label>
+        <label class="check"><input id="autoScroll" type="checkbox" /> <span>Scroll along while reading</span></label>
+      </section>
+    </div>
+
+    <h2>Get the most human-sounding voices (free)</h2>
+    <p>Read It To Me uses the voices already on your computer plus the ones Chrome ships with. Both are free. Downloading your system's premium voices makes a big difference — they are the same neural voices Siri and Windows Narrator use.</p>
+
+    <div class="card">
+      <h2 style="margin-top:0">macOS</h2>
+      <ol>
+        <li>Open <b>System Settings → Accessibility → Spoken Content</b>.</li>
+        <li>Click the ⓘ next to <b>System Voice</b>, then <b>Manage Voices…</b></li>
+        <li>Download any voice labelled <b>Premium</b> or <b>Enhanced</b> (Ava, Zoe, Evan and Nathan are the most lifelike).</li>
+        <li>Reopen this page and pick the new voice above.</li>
+      </ol>
+      <h2>Windows</h2>
+      <ol>
+        <li>Open <b>Settings → Time &amp; language → Speech</b>.</li>
+        <li>Under <b>Manage voices</b>, choose <b>Add voices</b> and install your language pack.</li>
+        <li>Voices named <b>Natural</b> are the neural ones — pick one above.</li>
+      </ol>
+      <h2>ChromeOS &amp; Linux</h2>
+      <ol>
+        <li>Chrome's own network voices (listed as <b>Google …</b>) are already available and sound natural.</li>
+        <li>On ChromeOS you can add more under <b>Settings → Accessibility → Text-to-Speech</b>.</li>
+      </ol>
+    </div>
+
+    <h2>Keyboard shortcuts</h2>
+    <p><code>Alt</code>+<code>R</code> read or stop · <code>Alt</code>+<code>P</code> pause or resume · <code>Alt</code>+<code>S</code> stop. Change them at <code>chrome://extensions/shortcuts</code>.</p>
+
+    <h2>Privacy</h2>
+    <p>Nothing you read is collected, stored or sent anywhere by this extension. Page text is passed straight to Chrome's speech engine, and your voice and speed settings sync through your own Chrome profile. Full policy: <a href="https://github.com/yonnytan/readItToMe/blob/main/PRIVACY.md">PRIVACY.md</a>.</p>
+
+    <script src="options.js"></script>
+  </body>
+</html>

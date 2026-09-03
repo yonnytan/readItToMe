@@ -1,0 +1,81 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #16181d;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2f6df6;
+  --accent-fg: #ffffff;
+  --ghost: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181d;
+    --fg: #f3f4f6;
+    --muted: #9aa3b2;
+    --line: #2b2f38;
+    --accent: #5b8cff;
+    --accent-fg: #0b0d11;
+    --ghost: #22262f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 320px;
+  margin: 0;
+  padding: 14px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.head h1 { margin: 0; font-size: 15px; font-weight: 650; letter-spacing: -0.01em; }
+
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 9px;
+  padding: 9px 10px;
+  cursor: pointer;
+  color: var(--fg);
+  background: var(--ghost);
+}
+button:hover { filter: brightness(0.96); }
+button.primary { background: var(--accent); color: var(--accent-fg); font-weight: 600; }
+button.wide, .actions .primary { width: 100%; }
+
+.actions { display: grid; gap: 7px; }
+.actions .row { display: grid; grid-template-columns: 1fr 1.6fr; gap: 7px; }
+
+.transport { display: grid; grid-template-columns: 1fr 2fr 1fr 1fr; gap: 7px; margin-top: 10px; }
+
+.status { margin: 10px 0 0; color: var(--muted); font-size: 12px; min-height: 1em; }
+.status.error { color: #d14343; }
+.now {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  max-height: 48px;
+  overflow: hidden;
+  font-style: italic;
+}
+
+.settings { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: grid; gap: 10px; }
+.field { display: grid; gap: 4px; font-size: 12px; color: var(--muted); }
+.field b { color: var(--fg); font-weight: 600; }
+select, input[type="range"] { width: 100%; font: inherit; }
+select {
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--fg);
+}
+.check { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+
+.foot { margin-top: 12px; text-align: center; }
+.foot a { color: var(--accent); font-size: 12px; text-decoration: none; }

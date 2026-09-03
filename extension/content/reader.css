@@ -1,0 +1,9 @@
+::highlight(rit-reading) {
+  background-color: #ffe08a;
+  color: #101010;
+}
+
+html.rit-picking,
+html.rit-picking * {
+  cursor: crosshair !important;
+}
