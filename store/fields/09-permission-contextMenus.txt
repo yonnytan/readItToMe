@@ -1,0 +1,1 @@
+Used to add "Read this out loud" and "Read this page out loud" items to the right-click menu, which is how many users prefer to start reading a selection.

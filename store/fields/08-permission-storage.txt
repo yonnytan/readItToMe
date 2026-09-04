@@ -1,0 +1,1 @@
+Used to save the user's own preferences — chosen voice, speed, pitch, volume, whether to highlight the current sentence, and whether to auto-scroll — so they persist between sessions. No page content and no personal data is stored.

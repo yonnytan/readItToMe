@@ -1,0 +1,1 @@
+Speaking text aloud is the extension's entire function. The tts permission is used to send the page text the user asked to have read to Chrome's built-in speech engine, and to list the available voices so the user can choose one.

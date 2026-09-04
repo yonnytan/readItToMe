@@ -1,0 +1,1 @@
+Read It To Me has one purpose: to read the text of the web page the user is on out loud using Chrome's text-to-speech engine, with controls for the voice, speed, pitch and volume.

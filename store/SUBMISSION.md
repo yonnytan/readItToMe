@@ -16,7 +16,7 @@ Budget about 15 minutes. Review typically takes a few hours to a few days.
 | Store icon, 128×128 | `store/assets/icon-128.png` |
 | Screenshots, 1280×800 | `store/assets/screenshot-1.png`, `-2.png`, `-3.png` |
 | Promo tiles (optional) | `store/assets/promo-440x280.png`, `promo-1400x560.png` |
-| All listing text | `store/listing.md` |
+| All listing text | `store/listing.md` — one paste-ready file per field in `store/fields/` |
 | Privacy policy URL | `https://github.com/yonnytan/readItToMe/blob/main/PRIVACY.md` |
 | A one-time US$5 fee | Paid to Google with a card, once, for the developer account |
 
@@ -29,6 +29,10 @@ The privacy-policy URL you give Google must be publicly reachable, or the item i
 > just replace the files with the same names.
 
 ---
+
+> **Why you have to do this part by hand:** Chrome blocks every extension — including browser
+> automation — from scripting the Chrome Web Store and its developer console. No assistant driving
+> your browser can see or fill that page; it is a browser-level protection, not a settings issue.
 
 ## 1. Create the developer account
 
@@ -48,7 +52,8 @@ The privacy-policy URL you give Google must be publicly reachable, or the item i
 
 ## 3. Fill the Store listing tab
 
-Copy each field from `store/listing.md`:
+Copy each field from `store/listing.md`, or paste straight from the numbered files in
+`store/fields/` (`pbcopy < store/fields/03-detailed-description.txt` puts one on your clipboard):
 
 - **Item name**, **Summary**, **Detailed description**
 - **Category:** Accessibility

@@ -1,0 +1,1 @@
+Used to inject the reader script into the active tab on demand, only after the user invokes the extension. That script finds the readable text, splits it into sentences, and highlights the sentence currently being spoken so the user can follow along. No script is injected on page load and none runs on pages the user has not asked to have read.

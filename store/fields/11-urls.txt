@@ -1,0 +1,5 @@
+Official URL / homepage:
+https://github.com/yonnytan/readItToMe
+
+Support URL:
+https://github.com/yonnytan/readItToMe/issues

@@ -1,0 +1,1 @@
+The extension needs the text of the page the user is currently looking at in order to read it aloud. activeTab is used so this access is granted only in the moment the user invokes the extension — by clicking its toolbar button, pressing its keyboard shortcut, or choosing its right-click menu item — instead of requesting standing access to websites.
