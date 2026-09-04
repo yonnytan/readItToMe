@@ -25,3 +25,11 @@ shot promo-440x280.html promo-440x280.png 440 280 &
 shot promo-1400x560.html promo-1400x560.png 1400 560 &
 wait
 echo "done"
+
+# The Chrome Web Store rejects alpha in screenshots and promo tiles, so ship
+# flattened JPEGs alongside the PNGs.
+for f in screenshot-1 screenshot-2 screenshot-3 promo-440x280 promo-1400x560; do
+  sips -s format jpeg -s formatOptions 92 "$root/store/assets/$f.png" \
+    --out "$root/store/assets/$f.jpg" >/dev/null
+  echo "store/assets/$f.jpg"
+done

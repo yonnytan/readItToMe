@@ -14,8 +14,8 @@ Budget about 15 minutes. Review typically takes a few hours to a few days.
 | --- | --- |
 | The upload package | `dist/read-it-to-me-1.0.0.zip` — run `./scripts/build.sh` |
 | Store icon, 128×128 | `store/assets/icon-128.png` |
-| Screenshots, 1280×800 | `store/assets/screenshot-1.png`, `-2.png`, `-3.png` |
-| Promo tiles (optional) | `store/assets/promo-440x280.png`, `promo-1400x560.png` |
+| Screenshots, 1280×800 | `store/assets/screenshot-1.jpg`, `-2.jpg`, `-3.jpg` (the store rejects PNG alpha — upload the JPEGs) |
+| Promo tiles (optional) | `store/assets/promo-440x280.jpg`, `promo-1400x560.jpg` |
 | All listing text | `store/listing.md` — one paste-ready file per field in `store/fields/` |
 | Privacy policy URL | `https://github.com/yonnytan/readItToMe/blob/main/PRIVACY.md` |
 | A one-time US$5 fee | Paid to Google with a card, once, for the developer account |
