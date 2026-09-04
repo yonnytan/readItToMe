@@ -23,6 +23,11 @@
 
 * { box-sizing: border-box; }
 
+html {
+  width: 320px;
+  overflow-x: hidden;
+}
+
 body {
   width: 320px;
   margin: 0;
